@@ -44,7 +44,7 @@ Basically, each node can do the right thing based on events. We have two ways to
 
 2- There is no already-created state and each node makes decisions on the fly. Here we need to read the whole event list and it can take a long time but there are cases where we might not have speed issues. Here the processor is stateless.
 
-<<We do not need it stateful. Conseptually recosntruct.>>
+We do not need it stateful. Conseptually recosntruct.
 
 # Action Items
 
