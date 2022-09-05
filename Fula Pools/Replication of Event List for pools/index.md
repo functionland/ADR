@@ -9,20 +9,23 @@ Decision document for implementation of the replication mechanism for the Event 
 ## Options Considered
 
 ### Modifying IPFS Cluster
+
 ### Writting from scratch using Bitswap
+
 
 ## Conclusion
 
 Chosen Option: **TBD**
 
+
 # ADR Description
 
 * Status: accepted/denied
-* Deciders: 
+* Deciders: Mehdi
 * Date: 
 
 Technical Story: 
-* As a <person>, I want <an outcome>
+* We have a DAG tree (CAR file) that we need replicated to all nodes connected together using Libp2p (or in an IPFS-Cluster)
 
 ## Context and Problem Statement
 What is the challenge?
@@ -33,7 +36,8 @@ Why is it a challenge?
 
 
 ## What options are we considering 
-* <High level list of options titles>
+* We can use IPFS-Cluster off the shelf and just use the features we need from it
+* We can create our own protocol basedon Bitswap from the ground up
  
 ## Decision Outcome
 <Describe the decision that was choosen>
