@@ -39,8 +39,11 @@ We can either build on top of RAFT directly ourselves, or use Etcd which provide
 ## Recosnnstruct the state (Fula APIs)
 the goal here is provide a set of protocols that each node can understand what is the expected state at each point, by reading the list of events and can rebuild the state.
 Basically, each node can do the right thing based on events. We have two ways to implement:
+
 1- Whenever an event happens we apply it to the state: this can be fast but create some security problems.
+
 2- There is no already-created state and each node makes decisions on the fly. Here we need to read the whole event list and it can take a long time but there are cases where we might not have speed issues. Here the processor is stateless.
+
 <<We do not need it stateful. Conseptually recosntruct.>>
 
 # Action Items
@@ -50,7 +53,9 @@ Basically, each node can do the right thing based on events. We have two ways to
 ### Assignee: Mehdi
 
 Considerations:
+
 1- We can build from scratch even at a alter stage
+
 2- For now we want to see the functioning system and test
 
 ## Create a list of events
