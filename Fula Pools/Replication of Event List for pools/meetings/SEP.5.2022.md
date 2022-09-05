@@ -28,6 +28,8 @@ We use IPLD schema and APIs to create instances of each IPLD link system. To ens
 We do not need to know what is exactly inside the event list at the begining. We start and as requirements come up we mature it.
 If we put a version in each event, then as new versionscome up, we know if the event were created based on an older version or not and can act accordingly for backward compatability.
 
+### Keywords: IPLD, Event List, go-ipld-prime, CAR file
+
 ## Replicate List of events (ignore the content)
 we can use something like go-ipld-prime and extract IPLD info and package into CAR files. Since IPFS-Cluster natively understand s the CAR files, it seems a good choice for replication.
 Bascially, we just use IPFS-Cluster (off-the-shelf) to share the DAGs. The goal is replication of state so that every node has access to the state.
@@ -35,6 +37,8 @@ We need to decide whether to use IPFS-Cluster or create a Bitswap server for exm
 
 If someone changes the state that is not allowed, every other node has access to the state to see if it is a legit change or not. Events are accumulatively replicated and we apply information when majority approves. This lead us to use RAFT mechanism. 
 We can either build on top of RAFT directly ourselves, or use Etcd which provides Strong sonsistent key-value store and uses RAFT.
+
+### Keywords: ETCD, RAFT, IPFS-Cluster, Bitswap
 
 ## Recosnnstruct the state (Fula APIs)
 the goal here is provide a set of protocols that each node can understand what is the expected state at each point, by reading the list of events and can rebuild the state.
