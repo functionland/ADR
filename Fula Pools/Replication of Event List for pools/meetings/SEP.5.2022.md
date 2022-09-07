@@ -28,7 +28,7 @@ We use IPLD schema and APIs to create instances of each IPLD link system. To ens
 We do not need to know what is exactly inside the event list at the begining. We start and as requirements come up we mature it.
 If we put a version in each event, then as new versionscome up, we know if the event were created based on an older version or not and can act accordingly for backward compatability.
 
-### Keywords: IPLD, Event List, go-ipld-prime, CAR file
+### Keywords: IPLD, Event List, go-ipld-prime, CAR file, Event Sourcing
 
 ## Replicate List of events (ignore the content)
 we can use something like go-ipld-prime and extract IPLD info and package into CAR files. Since IPFS-Cluster natively understand s the CAR files, it seems a good choice for replication.
