@@ -60,10 +60,12 @@ Instead of storing a JWE object along side with the encrypted file inside the Fu
 - The tree represents a mapping between a file's path and its corresponding JWE object(s)
 - Every encrypted file in the Fula Drive's private space, will have a unique entry inside this map
 
-### CrypTree
-
-
-
-<List pros and cons>
-- Good, because...
-- Bad, because...
+### WNFS
+WNFS uses same consept of CryptoTree. 
+- Build on top of UnixFS. 
+- Encrypting every folder/directory and files.
+- Unblock node/parent and see all belongs/childs
+- WNFS is E2EE. It has WebCrypto API. 
+- WNFS dose not handling any access management process but UCAN is additional layer for access management. UCAN has access revoke API with signatures.
+- Puting all together we can not revoke read access. Once audiance has symetric key we can not revoke read access. But we can change file version and change key rotation. Which means, we have to re-encrypt again.
+- All documentation related to WNFS showing that symmetric keys are stored in node/folder. But it worries me a bit.
