@@ -69,3 +69,13 @@ WNFS uses same consept of CryptoTree.
 - WNFS dose not handling any access management process but UCAN is additional layer for access management. UCAN has access revoke API with signatures.
 - Puting all together we can not revoke read access. Once audiance has symetric key we can not revoke read access. But we can change file version and change key rotation. Which means, we have to re-encrypt again.
 - All documentation related to WNFS showing that symmetric keys are stored in node/folder. But it worries me a bit.
+
+What does WNFS mainly have?
+- structured and unstructured directory solution
+- Encryption
+
+Conclusion:
+We alredy have a solution for encryption.
+- Basically we need to solve the directory structure problem as mentioned above.
+- When files are updated, we should update them and be able to pin them. If Audiences have public access to some folder, I would suggest adding pub-sub. In oreder to notify they have got some updates.
+- We have E2EE encryption, but we can also add hard encryption. When data stored in full-blox can use the 2nd layer encryption method.
